@@ -1,5 +1,5 @@
 {
-  "projectSettings": {
-    "rootDirectory": "shadcn-dashboard"
-  }
+  "buildCommand": "cd shadcn-dashboard && npm run build",
+  "outputDirectory": "shadcn-dashboard/dist",
+  "installCommand": "cd shadcn-dashboard && npm install"
 }
