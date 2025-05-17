@@ -1,4 +1,3 @@
-// src/lib/data.js
 export const articles = [
   {
     id: "1",

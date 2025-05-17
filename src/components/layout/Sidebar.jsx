@@ -1,4 +1,3 @@
-// src/components/layout/Sidebar.jsx
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { 
@@ -38,7 +37,6 @@ export function Sidebar() {
 
   return (
     <div className="h-full w-64 border-r bg-white shadow-sm">
-      {/* Logo and domain */}
       <div className="flex h-14 items-center justify-between border-b px-4">
         <Link to="/" className="flex items-center">
           <span className="text-xl font-bold">Dash</span>
@@ -50,7 +48,6 @@ export function Sidebar() {
         </div>
       </div>
 
-      {/* Navigation */}
       <div className="h-[calc(100vh-3.5rem)] overflow-auto py-2">
         <nav className="space-y-1 px-2">
           {navigation.map((item) => {

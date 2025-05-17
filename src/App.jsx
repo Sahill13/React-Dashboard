@@ -1,7 +1,6 @@
-// src/App.jsx
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { MainLayout } from "./components/layout/MainLayout";
+import { MainLayout } from "./components/layout/Mainlayout";
 import { Dashboard } from "./pages/Dashboard";
 import { GeneratedArticles } from "./pages/GeneratedArticles";
 
@@ -13,10 +12,7 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="articles/generated" element={<GeneratedArticles />} />
-          {/* Redirect to generated articles when accessing /articles */}
           <Route path="articles" element={<Navigate to="/articles/generated" replace />} />
-          
-          {/* For demonstration purposes, redirect these routes to generated articles */}
           <Route path="articles/*" element={<GeneratedArticles />} />
           <Route path="auto-blog" element={<GeneratedArticles />} />
           <Route path="internal-links" element={<GeneratedArticles />} />
@@ -28,8 +24,6 @@ function App() {
           <Route path="updates" element={<GeneratedArticles />} />
           <Route path="support" element={<GeneratedArticles />} />
           <Route path="profile" element={<GeneratedArticles />} />
-          
-          {/* Catch-all route for 404 */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>

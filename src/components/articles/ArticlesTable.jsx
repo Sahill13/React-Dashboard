@@ -1,4 +1,3 @@
-// src/components/articles/ArticlesTable.jsx
 import React, { useState } from "react";
 import { ArrowUpDown, ChevronUp, ChevronDown } from "lucide-react";
 

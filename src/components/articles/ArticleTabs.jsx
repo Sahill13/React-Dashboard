@@ -1,4 +1,3 @@
-// src/components/articles/ArticleTabs.jsx
 import React, { useState } from "react";
 import { ArticlesTable } from "./ArticlesTable";
 import { articles } from "../../lib/data";
@@ -33,8 +32,6 @@ export function ArticleTabs() {
   return (
     <div className="space-y-4 bg-white rounded-md shadow-sm p-6">
       <h1 className="text-2xl font-bold">Articles</h1>
-      
-      {/* Tab navigation - properly styled */}
       <div className="border-b-0">
         <div className="flex space-x-1 rounded-lg bg-blue-50 p-1">
           {["generated", "published", "scheduled", "archived"].map((tab) => (
@@ -53,8 +50,6 @@ export function ArticleTabs() {
           ))}
         </div>
       </div>
-      
-      {/* Search input with proper styling */}
       <div className="my-4">
         <input
           type="text"
@@ -64,8 +59,6 @@ export function ArticleTabs() {
           className="w-full max-w-sm px-3 py-2 border border-gray-200 rounded-md"
         />
       </div>
-      
-      {/* Only display the active tab's content */}
       <div className="mt-4">
         <ArticlesTable 
           articles={getArticlesByTab(activeTab)} 
